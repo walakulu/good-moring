@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: good-morning
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+
+security:
+  oauth2:
+    resource:
+      token-info-uri: http://localhost:9000/oauth/check_token
+    client:
+      client-id: api-user
+      client-secret: pin
